@@ -1,16 +1,12 @@
-name: CI
+name: Deploy to GitHub Pages
 
 permissions:
   contents: read
 
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
-      - synchronize
-      - reopened
-  workflow_call:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
